@@ -12,7 +12,7 @@ module.exports = (function(){
                 });
                 res.on('end', function() {
                     content =  JSON.parse(content);
-                    console.log(content.weather.description);
+                    console.log(content);
                 });
             }).on('error', function(e) {
                 console.log("Got error: " + e.message);
