@@ -5,8 +5,14 @@ module.exports = (function(){
     return {
         test: function(){
             http.get(API_URL, function(res) {
-                console.log(res);
                 console.log("Got response: " + res.statusCode);
+                var content = '';
+                res.on('data', function(chunk) {
+                    content += chunk;
+                });
+                res.on('end', function() {
+                    console.log(content);
+                });
             }).on('error', function(e) {
                 console.log("Got error: " + e.message);
             });
