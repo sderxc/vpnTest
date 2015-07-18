@@ -5,7 +5,7 @@ require('shelljs/global');
 router.get('/', function(req, res, next) {
     var r = exec('git pull').code;
     if ( r !== 0) {
-            echo('Error: Git commit failed');
+        echo('Error: Git commit failed');
     }
 
     res.send('pull exec with status ' + r);
