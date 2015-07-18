@@ -4,7 +4,7 @@ var weather = require('../service/weather');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    console.log(weather);
+  weather.test();
   res.render('index', { title: 'Express' });
 });
 
