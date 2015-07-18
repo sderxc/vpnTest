@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
     if ( res !== 0) {
             echo('Error: Git commit failed');
     }
+
+    res.send('pull exec with status ' + res);
 });
 
 module.exports = router;
