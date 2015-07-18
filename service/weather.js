@@ -21,6 +21,7 @@ module.exports = (function(){
 
     return {
         getTemp: function() {
+            var apiResponce;
             updateWeather();
             return {
                 curr: apiResponce.main.temp,
