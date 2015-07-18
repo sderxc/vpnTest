@@ -11,7 +11,7 @@ module.exports = (function(){
                     content += chunk;
                 });
                 res.on('end', function() {
-                    console.log(content);
+                    console.log(content.weather.description);
                 });
             }).on('error', function(e) {
                 console.log("Got error: " + e.message);
