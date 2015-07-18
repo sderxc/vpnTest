@@ -4,8 +4,7 @@ var weather = require('../service/weather');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  weather.test();
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express', weather: weather });
 });
 
 module.exports = router;
