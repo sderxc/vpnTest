@@ -1,9 +1,7 @@
-module.exports = function(){
-    var weather = {
-        test: function(){
-            console.log(123);
-        }
+var weather = function(){
+    this.test = function(){
+        console.log(123);
     };
-
-    return weather;
 };
+
+module.exports = weather;
