@@ -11,6 +11,7 @@ module.exports = (function(){
                     content += chunk;
                 });
                 res.on('end', function() {
+                    content =  JSON.parse(content);
                     console.log(content.weather.description);
                 });
             }).on('error', function(e) {
