@@ -3,12 +3,12 @@ var router = express.Router();
 require('shelljs/global');
 
 router.get('/', function(req, res, next) {
-    var res = exec('git pull').code;
-    if ( res !== 0) {
+    var r = exec('git pull').code;
+    if ( r !== 0) {
             echo('Error: Git commit failed');
     }
 
-    res.send('pull exec with status ' + res);
+    res.send('pull exec with status ' + r);
 });
 
 module.exports = router;
